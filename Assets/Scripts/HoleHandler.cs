@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class HoleHandler : MonoBehaviour
 {
     public float speed;
-    public DynamicJoystick dynamicJoystick;
+    public FixedJoystick fixedJoystick;
     public Rigidbody rb;
     [SerializeField] private float maxVelocity;
     
@@ -22,7 +22,7 @@ public class HoleHandler : MonoBehaviour
 
     public void FixedUpdate()
     {
-        Vector3 direction = Vector3.forward * dynamicJoystick.Vertical + Vector3.right * dynamicJoystick.Horizontal;
+        Vector3 direction = Vector3.forward * fixedJoystick.Vertical + Vector3.right * fixedJoystick.Horizontal;
         direction.y = 0f;
         direction.Normalize();
         rb.AddForce(direction * speed * Time.fixedDeltaTime, ForceMode.VelocityChange);
