@@ -29,6 +29,8 @@ public class HoleHandler : MonoBehaviour
         direction.Normalize();
         rb.AddForce(direction * speed * Time.fixedDeltaTime, ForceMode.VelocityChange);
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxVelocity);
+
+        
     }
 
     public void StopMoving()
@@ -36,5 +38,11 @@ public class HoleHandler : MonoBehaviour
         rb.velocity = Vector3.zero;
     }
 
+     /*void OnTriggerEnter(Collider other) {
+     if(other.gameObject.tag == "Objects")
+     {
+        other.GetComponent<Rigidbody>().isKinematic = false;
+     }
+ }*/
     
 }
