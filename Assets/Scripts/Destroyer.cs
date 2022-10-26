@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Destroyer : MonoBehaviour
 {
@@ -20,6 +21,12 @@ public class Destroyer : MonoBehaviour
             other.gameObject.SetActive(false);
 
             slider.value += value;
+        }
+        if(other.CompareTag("bomb"))
+        {
+            other.gameObject.SetActive(false);
+
+            SceneManager.LoadScene(1);
         }
     }
 
