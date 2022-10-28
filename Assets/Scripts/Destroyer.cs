@@ -14,6 +14,7 @@ public class Destroyer : MonoBehaviour
     [SerializeField] private GameObject navigator;
     private float value;
     
+    
     private void Start() 
     {
         value = 100f / GameObject.FindGameObjectsWithTag("Objects").Length;

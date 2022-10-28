@@ -15,9 +15,9 @@ public class GameOverHandler : MonoBehaviour
     [SerializeField] private GameObject gameOverDisplay;
 
     public const string LevelKey = "Level";
+    public const string LastLevelKey = "LastLevel";
 
 
-    
     
     public void EndGame()
     {
@@ -30,15 +30,17 @@ public class GameOverHandler : MonoBehaviour
     
     public void Restart()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void NextLevelButton()
     {
         int level = PlayerPrefs.GetInt(LevelKey, 1);
+        level = SceneManager.GetActiveScene().buildIndex + 1;
+        PlayerPrefs.SetInt(LevelKey , level);
+        int lastLevel = PlayerPrefs.GetInt(LastLevelKey, 1);
+        if(level > lastLevel) {PlayerPrefs.SetInt(LastLevelKey , level);}
         SceneManager.LoadScene(level);
-        level += 1;
-        PlayerPrefs.SetInt(LevelKey , level + 1);
     }
 
     public void ReturnToMenu()
