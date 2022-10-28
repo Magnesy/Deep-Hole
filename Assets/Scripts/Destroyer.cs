@@ -1,10 +1,17 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Destroyer : MonoBehaviour
 {
     [SerializeField] private Slider slider;
+
+    [SerializeField] private GameObject gameOverDisplay;
+    [SerializeField] private GameObject navigator;
     private float value;
     
     private void Start() 
@@ -25,8 +32,9 @@ public class Destroyer : MonoBehaviour
         if(other.CompareTag("bomb"))
         {
             other.gameObject.SetActive(false);
+            gameOverDisplay.gameObject.SetActive(true);
+            navigator.gameObject.SetActive(false);
 
-            SceneManager.LoadScene(1);
         }
     }
 
