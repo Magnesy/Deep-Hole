@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class HoleHandler : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class HoleHandler : MonoBehaviour
     public FixedJoystick fixedJoystick;
     public Rigidbody rb;
     [SerializeField] private float maxVelocity;
+    [SerializeField] private TMP_Text levelTitle;
 
     //Gravity
     [Header("Gravity")]
@@ -23,11 +25,8 @@ public class HoleHandler : MonoBehaviour
 
     void Start()
     {
-        
-    }
-    void Update()
-    {
-
+        int level = PlayerPrefs.GetInt("Level", 1);
+        levelTitle.text = "Level : " + level;
     }
 
 

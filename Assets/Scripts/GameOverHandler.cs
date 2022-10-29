@@ -8,8 +8,7 @@ using UnityEngine.UI;
 
 public class GameOverHandler : MonoBehaviour
 {
-    [SerializeField] private TMP_Text gameOverText;
-    [SerializeField] private TMP_Text highestScoreText;
+    //[SerializeField] private TMP_Text gameOverText;
     [SerializeField] private GameObject gameOverDisplay;
     [SerializeField] private int maxLevel = 1;
 
