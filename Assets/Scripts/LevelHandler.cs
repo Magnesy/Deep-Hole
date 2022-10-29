@@ -14,7 +14,7 @@ public class LevelHandler : MonoBehaviour
     {
         int level = PlayerPrefs.GetInt(LevelKey, 1);
         int Lastlevel = PlayerPrefs.GetInt(LastLevelKey, 1);
-        levelText.text = "Level : " + Lastlevel;
+        //levelText.text = "Level : " + Lastlevel;
         
     }
 
@@ -23,4 +23,9 @@ public class LevelHandler : MonoBehaviour
         int Lastlevel = PlayerPrefs.GetInt(LastLevelKey, 1);
         SceneManager.LoadScene(Lastlevel);
     }
+    public void ExitButton()
+    {
+        Application.Quit();
+    }
+    
 }
