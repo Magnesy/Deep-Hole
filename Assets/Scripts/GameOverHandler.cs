@@ -8,8 +8,6 @@ using UnityEngine.UI;
 
 public class GameOverHandler : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
-    [SerializeField] private Button nextLevelButton;
     [SerializeField] private TMP_Text gameOverText;
     [SerializeField] private TMP_Text highestScoreText;
     [SerializeField] private GameObject gameOverDisplay;
@@ -17,17 +15,6 @@ public class GameOverHandler : MonoBehaviour
     public const string LevelKey = "Level";
     public const string LastLevelKey = "LastLevel";
 
-
-    
-    public void EndGame()
-    {
-        //asteroidSpawner.enabled = false;
-
-        //gameOverText.text = "Your Score : " + finalScore;
-
-        gameOverDisplay.gameObject.SetActive(true);
-    }
-    
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -48,13 +35,4 @@ public class GameOverHandler : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void ContinueGame()
-    {
-        /*scoreSystem.StartTimer();
-        player.transform.position = Vector3.zero;
-        player.SetActive(true);
-        player.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        asteroidSpawner.enabled = true;
-        gameOverDisplay.gameObject.SetActive(false);*/
-    }
 }

@@ -11,6 +11,7 @@ public class Destroyer : MonoBehaviour
     [SerializeField] private Slider slider;
 
     [SerializeField] private GameObject gameOverDisplay;
+    [SerializeField] private GameObject gameWinDisplay;
     [SerializeField] private GameObject navigator;
     [SerializeField] private GameObject explosion;
     private float value;
@@ -33,7 +34,7 @@ public class Destroyer : MonoBehaviour
 
             if(slider.value >= 99.5f)
             {
-                Invoke("GameOverDisplay",1);
+                Invoke("GameWinDisplay",1);
             }
         }
         if(other.CompareTag("bomb"))
@@ -49,6 +50,11 @@ public class Destroyer : MonoBehaviour
     public void GameOverDisplay()
     {
         gameOverDisplay.gameObject.SetActive(true);
+    }
+
+    public void GameWinDisplay()
+    {
+        gameWinDisplay.gameObject.SetActive(true);
     }
 
 }
