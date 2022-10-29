@@ -33,8 +33,8 @@ public class GameOverHandler : MonoBehaviour
         }
         else 
         {
-            PlayerPrefs.SetInt(LevelKey , level);
-            PlayerPrefs.SetInt(LastLevelKey , level);
+            PlayerPrefs.SetInt(LevelKey , 1);
+            PlayerPrefs.SetInt(LastLevelKey , 1);
             ReturnToMenu();
         }
     }
