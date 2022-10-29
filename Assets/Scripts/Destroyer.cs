@@ -39,7 +39,7 @@ public class Destroyer : MonoBehaviour
             if(slider.value >= 99.5f)
             {
                 winSound.SetActive(true);
-                navigator.GetComponent<BoxCollider>().enabled = true;
+                this.GetComponent<BoxCollider>().enabled = false;
                 Invoke("GameWinDisplay", 0.7f);
             }
         }
@@ -48,7 +48,7 @@ public class Destroyer : MonoBehaviour
             other.gameObject.SetActive(false);
             explosion.SetActive(true);
             Invoke("GameOverDisplay",1);
-            navigator.GetComponent<BoxCollider>().enabled = true;
+            this.GetComponent<BoxCollider>().enabled = false;
 
         }
     }

@@ -10,7 +10,7 @@ public class GameOverHandler : MonoBehaviour
 {
     //[SerializeField] private TMP_Text gameOverText;
     [SerializeField] private GameObject gameOverDisplay;
-    [SerializeField] private int maxLevel = 1;
+    private int maxLevel = 5;
 
     public const string LevelKey = "Level";
     public const string LastLevelKey = "LastLevel";
@@ -31,7 +31,12 @@ public class GameOverHandler : MonoBehaviour
             if(level > lastLevel) {PlayerPrefs.SetInt(LastLevelKey , level);}
             SceneManager.LoadScene(level);
         }
-        else {ReturnToMenu();}
+        else 
+        {
+            PlayerPrefs.SetInt(LevelKey , level);
+            PlayerPrefs.SetInt(LastLevelKey , level);
+            ReturnToMenu();
+        }
     }
 
     public void ReturnToMenu()
