@@ -3191,7 +3191,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.28966513, y: -3.2480901e-15, z: 1.1700162e-15, w: 0.95712805}
+  m_LocalRotation: {x: 0.28966513, y: 3.2480901e-15, z: -1.1700162e-15, w: 0.95712805}
   m_LocalPosition: {x: 0, y: 110.74, z: -167.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3651,6 +3651,7 @@ MonoBehaviour:
   gameOverText: {fileID: 285130788}
   highestScoreText: {fileID: 0}
   gameOverDisplay: {fileID: 1199617683}
+  maxLevel: 1
 --- !u!4 &1199617685
 Transform:
   m_ObjectHideFlags: 0
@@ -4283,6 +4284,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1870617135}
   highestScoreText: {fileID: 0}
   gameOverDisplay: {fileID: 1477436040}
+  maxLevel: 1
 --- !u!1 &1481748518
 GameObject:
   m_ObjectHideFlags: 0
@@ -4635,7 +4637,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1598390098}
-  m_LocalRotation: {x: 0.28966513, y: -3.2480901e-15, z: 1.1700162e-15, w: 0.95712805}
+  m_LocalRotation: {x: 0.28966513, y: 3.2480901e-15, z: -1.1700162e-15, w: 0.95712805}
   m_LocalPosition: {x: 0, y: 110.74, z: -167.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5862,7 +5864,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941031135}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5875,7 +5877,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e481b1c3b0972e144b38ea104c0246d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

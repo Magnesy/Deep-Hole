@@ -11,6 +11,7 @@ public class GameOverHandler : MonoBehaviour
     [SerializeField] private TMP_Text gameOverText;
     [SerializeField] private TMP_Text highestScoreText;
     [SerializeField] private GameObject gameOverDisplay;
+    [SerializeField] private int maxLevel = 1;
 
     public const string LevelKey = "Level";
     public const string LastLevelKey = "LastLevel";
@@ -23,11 +24,15 @@ public class GameOverHandler : MonoBehaviour
     public void NextLevelButton()
     {
         int level = PlayerPrefs.GetInt(LevelKey, 1);
-        level = SceneManager.GetActiveScene().buildIndex + 1;
-        PlayerPrefs.SetInt(LevelKey , level);
-        int lastLevel = PlayerPrefs.GetInt(LastLevelKey, 1);
-        if(level > lastLevel) {PlayerPrefs.SetInt(LastLevelKey , level);}
-        SceneManager.LoadScene(level);
+        if(level < maxLevel)
+        {
+            level = SceneManager.GetActiveScene().buildIndex + 1;
+            PlayerPrefs.SetInt(LevelKey , level);
+            int lastLevel = PlayerPrefs.GetInt(LastLevelKey, 1);
+            if(level > lastLevel) {PlayerPrefs.SetInt(LastLevelKey , level);}
+            SceneManager.LoadScene(level);
+        }
+        else {ReturnToMenu();}
     }
 
     public void ReturnToMenu()
