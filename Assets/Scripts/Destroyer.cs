@@ -14,6 +14,7 @@ public class Destroyer : MonoBehaviour
     [SerializeField] private GameObject gameWinDisplay;
     [SerializeField] private GameObject navigator;
     [SerializeField] private GameObject explosion;
+    [SerializeField] private GameObject winSound;
     private float value;
     
     
@@ -34,7 +35,9 @@ public class Destroyer : MonoBehaviour
 
             if(slider.value >= 99.5f)
             {
-                Invoke("GameWinDisplay",1);
+                winSound.SetActive(true);
+                navigator.GetComponent<BoxCollider>().enabled = true;
+                Invoke("GameWinDisplay", 0.7f);
             }
         }
         if(other.CompareTag("bomb"))
@@ -42,7 +45,7 @@ public class Destroyer : MonoBehaviour
             other.gameObject.SetActive(false);
             explosion.SetActive(true);
             Invoke("GameOverDisplay",1);
-            navigator.GetComponent<HoleHandler>().enabled = false;
+            navigator.GetComponent<BoxCollider>().enabled = true;
 
         }
     }
