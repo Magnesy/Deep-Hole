@@ -12,6 +12,7 @@ public class Destroyer : MonoBehaviour
 
     [SerializeField] private GameObject gameOverDisplay;
     [SerializeField] private GameObject navigator;
+    [SerializeField] private GameObject explosion;
     private float value;
     
     
@@ -29,14 +30,25 @@ public class Destroyer : MonoBehaviour
             other.gameObject.SetActive(false);
 
             slider.value += value;
+
+            if(slider.value >= 99.5f)
+            {
+                Invoke("GameOverDisplay",1);
+            }
         }
         if(other.CompareTag("bomb"))
         {
             other.gameObject.SetActive(false);
-            gameOverDisplay.gameObject.SetActive(true);
-            navigator.gameObject.SetActive(false);
+            explosion.SetActive(true);
+            Invoke("GameOverDisplay",1);
+            navigator.GetComponent<HoleHandler>().enabled = false;
 
         }
+    }
+    
+    public void GameOverDisplay()
+    {
+        gameOverDisplay.gameObject.SetActive(true);
     }
 
 }
