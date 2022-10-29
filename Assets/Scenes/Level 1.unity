@@ -5931,6 +5931,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 693900839}
     m_Modifications:
+    - target: {fileID: 1645974550475858, guid: bc10ab94cceccfc48b5e7832a8dc015b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1831969664268716, guid: bc10ab94cceccfc48b5e7832a8dc015b, type: 3}
       propertyPath: m_Name
       value: VortexPortalRed
@@ -5995,21 +5999,33 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 198004019313482712, guid: bc10ab94cceccfc48b5e7832a8dc015b, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.50377357
+      objectReference: {fileID: 0}
+    - target: {fileID: 198004019313482712, guid: bc10ab94cceccfc48b5e7832a8dc015b, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198004019313482712, guid: bc10ab94cceccfc48b5e7832a8dc015b, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.8019292
+      objectReference: {fileID: 0}
     - target: {fileID: 198214025119628336, guid: bc10ab94cceccfc48b5e7832a8dc015b, type: 3}
       propertyPath: prewarm
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198214025119628336, guid: bc10ab94cceccfc48b5e7832a8dc015b, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.0031927393
+      value: 0.30588236
       objectReference: {fileID: 0}
     - target: {fileID: 198214025119628336, guid: bc10ab94cceccfc48b5e7832a8dc015b, type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198214025119628336, guid: bc10ab94cceccfc48b5e7832a8dc015b, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.33962262
+      value: 0.3647059
       objectReference: {fileID: 0}
     - target: {fileID: 198214025119628336, guid: bc10ab94cceccfc48b5e7832a8dc015b, type: 3}
       propertyPath: startDelay.maxCurve.m_Curve.Array.data[0].value
