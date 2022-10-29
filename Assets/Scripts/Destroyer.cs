@@ -15,6 +15,7 @@ public class Destroyer : MonoBehaviour
     [SerializeField] private GameObject navigator;
     [SerializeField] private GameObject explosion;
     [SerializeField] private GameObject winSound;
+    [SerializeField] private AudioSource eatSound;
     private float value;
     
     
@@ -32,6 +33,8 @@ public class Destroyer : MonoBehaviour
             other.gameObject.SetActive(false);
 
             slider.value += value;
+
+            eatSound.Play();
 
             if(slider.value >= 99.5f)
             {
