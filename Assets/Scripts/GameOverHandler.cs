@@ -10,7 +10,7 @@ public class GameOverHandler : MonoBehaviour
 {
     //[SerializeField] private TMP_Text gameOverText;
     [SerializeField] private GameObject gameOverDisplay;
-    private int maxLevel = 5;
+    private int maxLevel = 10;
 
     public const string LevelKey = "Level";
     public const string LastLevelKey = "LastLevel";
