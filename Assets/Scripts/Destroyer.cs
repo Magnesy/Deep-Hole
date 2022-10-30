@@ -66,8 +66,10 @@ public class Destroyer : MonoBehaviour
         int level = PlayerPrefs.GetInt(LevelKey, 1);
         if(level < maxLevel)
         {
+            level = SceneManager.GetActiveScene().buildIndex + 1;
+            PlayerPrefs.SetInt(LevelKey , level);
             int lastLevel = PlayerPrefs.GetInt(LastLevelKey, 1);
-            PlayerPrefs.SetInt(LastLevelKey , level + 1);
+            PlayerPrefs.SetInt(LastLevelKey , level);
         }
         else 
         {

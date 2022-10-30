@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class HoleHandler : MonoBehaviour
 {
@@ -25,8 +26,7 @@ public class HoleHandler : MonoBehaviour
 
     void Start()
     {
-        int level = PlayerPrefs.GetInt("Level", 1);
-        levelTitle.text = "Level : " + level;
+        levelTitle.text = "Level : " + SceneManager.GetActiveScene().buildIndex;
     }
 
     private void FixedUpdate()

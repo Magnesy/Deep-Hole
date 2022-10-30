@@ -15,18 +15,33 @@ public class GameOverHandler : MonoBehaviour
     public const string LevelKey = "Level";
     public const string LastLevelKey = "LastLevel";
 
-    public void Restart()
+    public void RestartWin()
+    {
+        int level = SceneManager.GetActiveScene().buildIndex;
+        if(level < maxLevel)
+        {
+            PlayerPrefs.SetInt(LevelKey , level);
+            int lastLevel = PlayerPrefs.GetInt(LastLevelKey, 1);
+            PlayerPrefs.SetInt(LastLevelKey , level + 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        
+    }
+    public void RestartLose()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
 
     public void NextLevelButton()
     {
         int level = PlayerPrefs.GetInt(LevelKey, 1);
         if(level < maxLevel)
         {
-            level = SceneManager.GetActiveScene().buildIndex + 1;
-            PlayerPrefs.SetInt(LevelKey , level);
             SceneManager.LoadScene(level);
         }
         else 

@@ -124,7 +124,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4132796912967988145}
         m_TargetAssemblyTypeName: GameOverHandler, Assembly-CSharp
-        m_MethodName: Restart
+        m_MethodName: RestartLose
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
