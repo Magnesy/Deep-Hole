@@ -17,7 +17,10 @@ public class Destroyer : MonoBehaviour
     [SerializeField] private GameObject winSound;
     [SerializeField] private AudioSource eatSound;
     private float value;
-    
+
+    public const string LevelKey = "Level";
+    public const string LastLevelKey = "LastLevel";
+    private int maxLevel = 10;
     
     private void Start() 
     {
@@ -60,6 +63,17 @@ public class Destroyer : MonoBehaviour
 
     public void GameWinDisplay()
     {
+        int level = PlayerPrefs.GetInt(LevelKey, 1);
+        if(level < maxLevel)
+        {
+            int lastLevel = PlayerPrefs.GetInt(LastLevelKey, 1);
+            PlayerPrefs.SetInt(LastLevelKey , level + 1);
+        }
+        else 
+        {
+            PlayerPrefs.SetInt(LevelKey , 1);
+            PlayerPrefs.SetInt(LastLevelKey , 1);
+        }
         gameWinDisplay.gameObject.SetActive(true);
     }
 

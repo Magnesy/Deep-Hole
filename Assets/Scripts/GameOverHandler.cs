@@ -27,15 +27,11 @@ public class GameOverHandler : MonoBehaviour
         {
             level = SceneManager.GetActiveScene().buildIndex + 1;
             PlayerPrefs.SetInt(LevelKey , level);
-            int lastLevel = PlayerPrefs.GetInt(LastLevelKey, 1);
-            if(level > lastLevel) {PlayerPrefs.SetInt(LastLevelKey , level);}
             SceneManager.LoadScene(level);
         }
         else 
         {
-            PlayerPrefs.SetInt(LevelKey , 1);
-            PlayerPrefs.SetInt(LastLevelKey , 1);
-            ReturnToMenu();
+            SceneManager.LoadScene(1);
         }
     }
 

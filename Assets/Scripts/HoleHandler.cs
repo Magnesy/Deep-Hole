@@ -7,7 +7,7 @@ using TMPro;
 public class HoleHandler : MonoBehaviour
 {
     public float speed;
-    public FixedJoystick fixedJoystick;
+    public FloatingJoystick floatingJoystick;
     public Rigidbody rb;
     [SerializeField] private float maxVelocity;
     [SerializeField] private TMP_Text levelTitle;
@@ -29,11 +29,10 @@ public class HoleHandler : MonoBehaviour
         levelTitle.text = "Level : " + level;
     }
 
-
     private void FixedUpdate()
     {
-        if(!Touchscreen.current.primaryTouch.press.isPressed){Invoke("StopMoving", 0.15f);}
-        Vector3 direction = Vector3.forward * fixedJoystick.Vertical + Vector3.right * fixedJoystick.Horizontal;
+        if(Input.touchCount == 0){Invoke("StopMoving", 0.1f);}
+        Vector3 direction = Vector3.forward * floatingJoystick.Vertical + Vector3.right * floatingJoystick.Horizontal;
         direction.y = 0f;
         direction.Normalize();
         rb.AddForce(direction * speed * Time.fixedDeltaTime, ForceMode.VelocityChange);
@@ -46,7 +45,7 @@ public class HoleHandler : MonoBehaviour
         transform.position = new Vector3(0,0,0) + allowedPos;
     }
 
-    public void StopMoving()
+    void StopMoving()
     {
         rb.velocity = Vector3.zero;
     }
