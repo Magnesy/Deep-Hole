@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2456185369380280925}
   - component: {fileID: 5394874079056226126}
   - component: {fileID: -3681586492526909711}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BombBall
-  m_TagString: Untagged
+  m_TagString: bomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,10 +27,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4113725879295933320}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8454099, y: 1.27, z: 2.4653535}
-  m_LocalScale: {x: 0.74051476, y: 0.74051476, z: 0.74051476}
-  m_ConstrainProportionsScale: 0
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3960007215244305943}
   m_Father: {fileID: 0}
@@ -122,9 +122,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3629113262558388530}
     m_Modifications:
+    - target: {fileID: 151758, guid: ac1bf2203f8a8174fa539203f0d7018b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 196116, guid: ac1bf2203f8a8174fa539203f0d7018b, type: 3}
       propertyPath: m_Name
       value: PowerupGlow5
+      objectReference: {fileID: 0}
+    - target: {fileID: 196116, guid: ac1bf2203f8a8174fa539203f0d7018b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 483210, guid: ac1bf2203f8a8174fa539203f0d7018b, type: 3}
       propertyPath: m_RootOrder
