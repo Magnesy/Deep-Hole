@@ -20,7 +20,7 @@ public class Destroyer : MonoBehaviour
 
     public const string LevelKey = "Level";
     public const string LastLevelKey = "LastLevel";
-    private int maxLevel = 10;
+    private int maxLevel = 20;
     
     private void Start() 
     {
