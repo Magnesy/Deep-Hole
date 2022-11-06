@@ -133,7 +133,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 64
-  maxRadius: 14
+  maxRadius: 8
 --- !u!54 &3038836443702378771
 Rigidbody:
   m_ObjectHideFlags: 0
