@@ -12,6 +12,7 @@ public class HoleHandler : MonoBehaviour
     public Rigidbody rb;
     [SerializeField] private float maxVelocity;
     [SerializeField] private TMP_Text levelTitle;
+    [SerializeField] private GameObject destroyer;
 
     //Gravity
     [Header("Gravity")]
@@ -23,10 +24,27 @@ public class HoleHandler : MonoBehaviour
     public LayerMask layerMask;
     public float maxRadius = 10f;
 
+    public const string refNumber = "ReferenceNumber";
+
 
     void Start()
     {
-        levelTitle.text = "Level : " + SceneManager.GetActiveScene().buildIndex;
+        if(PlayerPrefs.GetInt(refNumber , 0) == 1)
+        {
+            levelTitle.text = "Level : " + (SceneManager.GetActiveScene().buildIndex + 14);
+        }
+        else if(PlayerPrefs.GetInt(refNumber , 0) == 2)
+        {
+            levelTitle.text = "Level : " + (SceneManager.GetActiveScene().buildIndex + 14*2);
+        }
+        else if(PlayerPrefs.GetInt(refNumber , 0) == 3)
+        {
+            levelTitle.text = "Level : " + (SceneManager.GetActiveScene().buildIndex + 14*3);
+        }
+        else
+        {
+            levelTitle.text = "Level : " + SceneManager.GetActiveScene().buildIndex;
+        }
     }
 
     private void FixedUpdate()
@@ -43,6 +61,11 @@ public class HoleHandler : MonoBehaviour
         var allowedPos = transform.position - new Vector3(0,0,0);
         allowedPos = Vector3.ClampMagnitude(allowedPos, maxRadius); 
         transform.position = new Vector3(0,0,0) + allowedPos;
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            destroyer.GetComponent<Destroyer>().GameWinDisplay();
+        }
     }
 
     void StopMoving()

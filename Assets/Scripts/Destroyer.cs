@@ -20,6 +20,7 @@ public class Destroyer : MonoBehaviour
 
     public const string LevelKey = "Level";
     public const string LastLevelKey = "LastLevel";
+    public const string refNumber = "ReferenceNumber";
     private int maxLevel = 20;
     
     private void Start() 
@@ -64,17 +65,19 @@ public class Destroyer : MonoBehaviour
     public void GameWinDisplay()
     {
         int level = PlayerPrefs.GetInt(LevelKey, 1);
+        int refNum = PlayerPrefs.GetInt(refNumber , 0);
         if(level < maxLevel)
         {
             level = SceneManager.GetActiveScene().buildIndex + 1;
             PlayerPrefs.SetInt(LevelKey , level);
-            int lastLevel = PlayerPrefs.GetInt(LastLevelKey, 1);
             PlayerPrefs.SetInt(LastLevelKey , level);
         }
         else 
         {
-            PlayerPrefs.SetInt(LevelKey , 1);
-            PlayerPrefs.SetInt(LastLevelKey , 1);
+            PlayerPrefs.SetInt(LevelKey , 7);
+            PlayerPrefs.SetInt(LastLevelKey , 7);
+            refNum = refNum + 1;
+            PlayerPrefs.SetInt(refNumber , refNum);
         }
         gameWinDisplay.gameObject.SetActive(true);
     }

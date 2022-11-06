@@ -125,6 +125,7 @@ MonoBehaviour:
   rb: {fileID: 3038836443702378771}
   maxVelocity: 1.5
   levelTitle: {fileID: 0}
+  destroyer: {fileID: 3038836445214777316}
   power: 1
   upOrDown: -0.5
   forceRange: 0.75

@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public class LevelHandler : MonoBehaviour
 {
 
-    [SerializeField] private TMP_Text levelText;
     [SerializeField] private GameObject startButton;
     [SerializeField] private GameObject exitbutton;
     [SerializeField] private GameObject startSlider;

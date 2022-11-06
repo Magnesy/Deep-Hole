@@ -2225,7 +2225,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715684107}
-  m_LocalRotation: {x: 0.2896651, y: -0.000000028524642, z: 0.000000008632694, w: 0.95712805}
+  m_LocalRotation: {x: 0.28966513, y: 1.5231177e-16, z: 1.4091875e-16, w: 0.95712805}
   m_LocalPosition: {x: 0, y: 112.34, z: -167.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5596,7 +5596,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008778123}
-  m_LocalRotation: {x: 0.2896651, y: -0.000000028524642, z: 0.000000008632694, w: 0.95712805}
+  m_LocalRotation: {x: 0.28966513, y: 1.5231177e-16, z: 1.4091875e-16, w: 0.95712805}
   m_LocalPosition: {x: 0, y: 112.34, z: -167.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6094,10 +6094,6 @@ PrefabInstance:
       propertyPath: levelTitle
       value: 
       objectReference: {fileID: 1484596932}
-    - target: {fileID: 3038836443702378770, guid: 955e47a8bbf395b40b587de3de5a4fb7, type: 3}
-      propertyPath: fixedJoystick
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3038836443702378770, guid: 955e47a8bbf395b40b587de3de5a4fb7, type: 3}
       propertyPath: floatingJoystick
       value: 
