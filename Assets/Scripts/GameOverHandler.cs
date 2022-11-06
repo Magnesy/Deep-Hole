@@ -46,7 +46,7 @@ public class GameOverHandler : MonoBehaviour
         }
         else 
         {
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene(6);
         }
     }
 

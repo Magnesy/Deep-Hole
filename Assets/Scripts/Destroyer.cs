@@ -74,8 +74,8 @@ public class Destroyer : MonoBehaviour
         }
         else 
         {
-            PlayerPrefs.SetInt(LevelKey , 7);
-            PlayerPrefs.SetInt(LastLevelKey , 7);
+            PlayerPrefs.SetInt(LevelKey , 6);
+            PlayerPrefs.SetInt(LastLevelKey , 6);
             refNum = refNum + 1;
             PlayerPrefs.SetInt(refNumber , refNum);
         }
