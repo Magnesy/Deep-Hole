@@ -62,10 +62,7 @@ public class HoleHandler : MonoBehaviour
         allowedPos = Vector3.ClampMagnitude(allowedPos, maxRadius); 
         transform.position = new Vector3(0,0,0) + allowedPos;
 
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            destroyer.GetComponent<Destroyer>().GameWinDisplay();
-        }
+        //if (Input.GetKeyDown(KeyCode.C)){destroyer.GetComponent<Destroyer>().GameWinDisplay();}
     }
 
     void StopMoving()
@@ -92,10 +89,7 @@ public class HoleHandler : MonoBehaviour
         }
     }
     
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(transform.position,forceRange);
-    }
+    private void OnDrawGizmos(){Gizmos.DrawWireSphere(transform.position,forceRange);}
 
 }
 
