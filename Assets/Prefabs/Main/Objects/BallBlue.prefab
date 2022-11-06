@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5287528072217273879}
   - component: {fileID: 7964023912218120925}
   - component: {fileID: 2878833276453974588}
-  - component: {fileID: 291084354192981013}
+  - component: {fileID: 5609034271407730820}
   m_Layer: 6
   m_Name: BallBlue
   m_TagString: Objects
@@ -101,8 +101,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &291084354192981013
-BoxCollider:
+--- !u!135 &5609034271407730820
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -112,5 +112,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.8462448, y: 1.86061, z: 1.8497266}
-  m_Center: {x: 0.00000047683716, y: -0.00000023841858, z: 0.0000033080576}
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0.0000033080576}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8945915504958901505}
   - component: {fileID: 6612042404862949835}
   - component: {fileID: 1347983224462793002}
-  - component: {fileID: 3552627248673462019}
+  - component: {fileID: 4188442697651011795}
   m_Layer: 6
   m_Name: BallPink
   m_TagString: Objects
@@ -101,8 +101,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &3552627248673462019
-BoxCollider:
+--- !u!135 &4188442697651011795
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -112,5 +112,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.8462448, y: 1.86061, z: 1.8497266}
-  m_Center: {x: 0.00000047683716, y: -0.00000023841858, z: 0.0000033080576}
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0.0000033080576}
